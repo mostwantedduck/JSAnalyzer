@@ -36,24 +36,7 @@ A powerful Burp Suite extension for JavaScript static analysis. Extracts API end
    - Repeater
 3. Select **"Analyze JS with JS Analyzer"**
 4. Check the **JS Analyzer** tab for results
-
-## Screenshots
-
-### Main Interface
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│ JS Analyzer | E:15 | U:8 | S:2 | M:3  Search:[____] Source:[All ▼]  │
-├──────────────────────────────────────────────────────────────────────┤
-│ [Endpoints (15)] [URLs (8)] [Secrets (2)] [Emails (3)] [Files (5)]   │
-├──────────────────────────────────────────────────────────────────────┤
-│ Value                                          │ Source              │
-│ /api/v1/users/profile                          │ app.js              │
-│ /api/v2/auth/token                             │ app.js              │
-│ /oauth2/authorize                              │ login.js            │
-│ /admin/dashboard                               │ main.js             │
-│ /.well-known/openid-configuration              │ auth.js             │
-└──────────────────────────────────────────────────────────────────────┘
-```
+5. 
 
 ## What It Detects
 
