@@ -75,6 +75,9 @@ URL_PATTERNS = [
     re.compile(r'(https?://[a-zA-Z0-9.-]+\.s3[a-zA-Z0-9.-]*\.amazonaws\.com[^\s"\'<>]*)'),
     re.compile(r'(https?://[a-zA-Z0-9.-]+\.blob\.core\.windows\.net[^\s"\'<>]*)'),
     re.compile(r'(https?://storage\.googleapis\.com/[^\s"\'<>]*)'),
+    # Firebase URL
+    re.compile(r'https:\/\/[a-z0-9-]+\.firebaseio\.com'),
+    
 ]
 
 # Secret patterns
