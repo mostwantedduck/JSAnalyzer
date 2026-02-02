@@ -4,7 +4,7 @@ JS Analyzer - Burp Suite Extension
 Focused JavaScript analysis with strict endpoint filtering to reduce noise.
 """
 
-from burp import IBurpExtender, IContextMenuFactory, ITab
+from burp import IBurpExtender, IContextMenuFactory, ITab, IHttpListener
 
 from javax.swing import JMenuItem
 from java.awt.event import ActionListener
@@ -12,6 +12,8 @@ from java.util import ArrayList
 from java.io import PrintWriter
 
 import sys
+import json
+import time
 import os
 import re
 import inspect
@@ -211,7 +213,7 @@ NOISE_STRINGS = {
 }
 
 
-class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
+class BurpExtender(IBurpExtender, IContextMenuFactory, ITab, IHttpListener):
     """JS Analyzer with noise-reduced endpoint detection."""
     
     def registerExtenderCallbacks(self, callbacks):
@@ -226,12 +228,15 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
         # Results storage
         self.all_findings = []
         self.seen_values = set()
+        self._scope_cache_time = 0
+        self._scope_cache_value = False
         
         # Initialize UI
         self.panel = ResultsPanel(callbacks, self)
         
         callbacks.registerContextMenuFactory(self)
         callbacks.addSuiteTab(self)
+        callbacks.registerHttpListener(self)
         
         self._log("JS Analyzer loaded - Right-click JS responses to analyze")
     
@@ -256,6 +261,89 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
             self._log("Menu error: " + str(e))
         return menu
     
+    def _is_scope_active(self):
+        """Check if target scope has any active rules."""
+        now = time.time()
+        if now - self._scope_cache_time < 30:
+            return self._scope_cache_value
+            
+        is_active = False
+        try:
+            config_str = self._callbacks.saveConfigAsJson("target.scope")
+            if config_str:
+                config = json.loads(config_str)
+                root = config
+                if 'target' in root: root = root['target']
+                if 'scope' in root: root = root['scope']
+                
+                includes = root.get('include', [])
+                for rule in includes:
+                    if rule.get('enabled', True):
+                        is_active = True
+                        break
+        except Exception as e:
+            self._log("Scope check warning: " + str(e))
+            
+        self._scope_cache_time = now
+        self._scope_cache_value = is_active
+        return is_active
+
+    def processHttpMessage(self, toolFlag, messageIsRequest, messageInfo):
+        """
+        Automatic scanning of proxy traffic.
+        Only scan responses from Proxy (or Spider/Scanner if desired).
+        """
+        # Only process responses
+        if messageIsRequest:
+            return
+        
+        # Only process Proxy traffic (toolFlag == 4) 
+        if toolFlag != self._callbacks.TOOL_PROXY:
+            return
+            
+        # Get URL to check scope and extension
+        request_info = self._helpers.analyzeRequest(messageInfo)
+        url = request_info.getUrl()
+        url_str = str(url)
+        
+        self._log("Checking: " + url_str)
+        
+        # Check if in scope
+        if not self._callbacks.isInScope(url):
+            # Not explicitly in scope. Check if scope is active/filled.
+            if self._is_scope_active():
+                self._log("-> Skipped: Out of active scope")
+                return
+            else:
+                self._log("-> Note: Scope empty, monitoring all traffic.")
+            
+        # Check file extension
+        path = url.getPath().lower()
+        is_js_ext = any(path.endswith(ext) for ext in ['.js', '.json', '.map'])
+        
+        # Check Content-Type header
+        is_js_content = False
+        response_info = self._helpers.analyzeResponse(messageInfo.getResponse())
+        headers = response_info.getHeaders()
+        
+        content_type = "unknown"
+        for header in headers:
+            if header.lower().startswith("content-type:"):
+                content_type = header.split(":", 1)[1].strip()
+                value = header.lower()
+                if "javascript" in value or "json" in value:
+                    is_js_content = True
+                    break
+        
+        self._log("-> Ext: %s, Type: %s" % (is_js_ext, content_type))
+        
+        # Proceed if matches criteria produces
+        if is_js_ext or is_js_content:
+            self._log("-> MATCH! Analyzing...")
+            self.analyze_response(messageInfo)
+        else:
+            self._log("-> Skipped: Not JS/JSON")
+
     def analyze_response(self, message_info):
         """Analyze a response."""
         response = message_info.getResponse()
@@ -266,6 +354,29 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
         try:
             req_info = self._helpers.analyzeRequest(message_info)
             url = str(req_info.getUrl())
+
+            headers = req_info.getHeaders()
+            host_header = None
+            origin_header = None
+            referer_header = None
+            
+            for header in headers:
+                if header.lower().startswith("host:"):
+                    host_header = header.split(":", 1)[1].strip()
+                elif header.lower().startswith("origin:"):
+                    origin_header = header.split(":", 1)[1].strip()
+                elif header.lower().startswith("referer:"):
+                    referer_header = header.split(":", 1)[1].strip()
+            
+            if not host_header:
+                host_header = "Unknown"
+
+            if not origin_header:
+                origin_header = "Unknown"
+
+            if not referer_header:
+                referer_header = "Unknown"  
+            
             source_name = url.split('/')[-1].split('?')[0] if '/' in url else url
             if len(source_name) > 40:
                 source_name = source_name[:40] + "..."
@@ -292,7 +403,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
                     try:
                         value = match.group(1).strip()
                         if self._is_valid_endpoint(value):
-                            finding = self._add_finding("endpoints", value, source_name)
+                            finding = self._add_finding("endpoints", value, source_name, host_header, origin_header, referer_header)
                             if finding:
                                 new_findings.append(finding)
                     except (IndexError, Exception) as e:
@@ -307,7 +418,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
                     try:
                         value = match.group(1).strip() if match.lastindex else match.group(0).strip()
                         if self._is_valid_url(value):
-                            finding = self._add_finding("urls", value, source_name)
+                            finding = self._add_finding("urls", value, source_name, host_header, origin_header, referer_header)
                             if finding:
                                 new_findings.append(finding)
                     except (IndexError, Exception) as e:
@@ -323,7 +434,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
                         value = match.group(1).strip()
                         if self._is_valid_secret(value):
                             masked = value[:10] + "..." + value[-4:] if len(value) > 20 else value
-                            finding = self._add_finding("secrets", masked, source_name)
+                            finding = self._add_finding("secrets", masked, source_name, host_header, origin_header, referer_header)
                             if finding:
                                 new_findings.append(finding)
                     except (IndexError, Exception) as e:
@@ -337,7 +448,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
                 try:
                     value = match.group(1).strip()
                     if self._is_valid_email(value):
-                        finding = self._add_finding("emails", value, source_name)
+                        finding = self._add_finding("emails", value, source_name, host_header, origin_header, referer_header)
                         if finding:
                             new_findings.append(finding)
                 except (IndexError, Exception) as e:
@@ -351,7 +462,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
                 try:
                     value = match.group(1).strip()
                     if self._is_valid_file(value):
-                        finding = self._add_finding("files", value, source_name)
+                        finding = self._add_finding("files", value, source_name, host_header, origin_header, referer_header)
                         if finding:
                             new_findings.append(finding)
                 except (IndexError, Exception) as e:
@@ -366,7 +477,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
         else:
             self._log("No new findings")
     
-    def _add_finding(self, category, value, source):
+    def _add_finding(self, category, value, source, host_header, origin_header, referer_header):
         """Add a finding if not duplicate."""
         key = category + ":" + value
         if key in self.seen_values:
@@ -377,6 +488,9 @@ class BurpExtender(IBurpExtender, IContextMenuFactory, ITab):
             "category": category,
             "value": value,
             "source": source,
+            "host_header": host_header,
+            "origin_header": origin_header,
+            "referer_header": referer_header,
         }
         self.all_findings.append(finding)
         return finding
