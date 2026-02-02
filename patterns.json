@@ -1,0 +1,1809 @@
+{
+  "endpoint_patterns": [
+    {
+      "pattern": "[\"\\']((?:https?:)?//[^\"\\']+/api/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/api/v?\\d*/[a-zA-Z0-9/_-]{2,})[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/v\\d+/[a-zA-Z0-9/_-]{2,})[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/rest/[a-zA-Z0-9/_-]{2,})[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/graphql[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/grpc[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/soap[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/rpc[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/json-rpc[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/v[0-9]+(?:\\.[0-9]+)?/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/api/v[0-9]+(?:\\.[0-9]+)?/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/api/version/[0-9]+/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/oauth[0-9]*/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/auth[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/login[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/logout[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/token[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/admin[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/dashboard[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/internal[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/debug[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/config[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/backup[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/private[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/upload[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/download[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/authorize[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/authenticate[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/register[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/signup[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/signin[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/signout[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/callback[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/refresh[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/sso[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/saml[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/openid[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/secret[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/secure[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/hidden[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/test[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/staging[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/dev[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/prod[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/uat[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/qa[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/data[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/database[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/db[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/export[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/import[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/migrate[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/sql[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/file[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/files[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/document[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/documents[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/archive[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/static/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/media/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/assets/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/user[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/users[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/account[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/accounts[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/profile[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/profiles[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/member[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/members[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/customer[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/customers[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/system[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/server[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/servers[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/status[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/health[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/metrics[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/monitoring[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/logs[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/logging[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/console[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/shell[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/terminal[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/payment[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/payments[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/transaction[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/transactions[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/billing[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/invoice[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/invoices[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/checkout[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/webhook[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/webhooks[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/hook[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/hooks[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/callback/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/notify[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/notification[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/\\.well-known/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/idp/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/\\.git/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/\\.svn/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/\\.hg/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/actuator[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/rails[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/wp-[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/wp-content/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/wp-admin/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/wp-includes/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/wp-json/[a-zA-Z0-9/_-]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/swagger[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/openapi[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/docs[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/documentation[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/redoc[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/playground[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/explorer[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/search[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/query[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/lookup[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/slack[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/discord[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/github[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/gitlab[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/bitbucket[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/stripe[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/paypal[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/email[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/mail[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/newsletter[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/subscribe[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/unsubscribe[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/gateway[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/proxy[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/route[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/cache[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/flush[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/purge[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/queue[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/job[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/jobs[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/task[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/tasks[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/phpmyadmin[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/adminer[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/pgadmin[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/mongodb[a-zA-Z0-9/_-]*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](.*\\.(?:git|svn|hg|bak|old|backup|swp))[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](.*\\.(?:sql|dump|tar|gz|zip|7z|rar))[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](.*\\.(?:env|config|conf|ini|properties|yml|yaml|json))[\"\\']",
+      "flags": "i"
+    }
+  ],
+  "url_patterns": [
+    {
+      "pattern": "[\"\\'](https?://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](wss?://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](sftp://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](ftp://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](ftps://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](ws://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](wss://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](ssh://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](telnet://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](smtp://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](ldap://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](ldaps://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](mongo://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](mongodb(?:\\+srv)?://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](redis://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](rediss://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](postgres(?:ql)?://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\'](mysql://[^\\s\"\\'<>]{10,})[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.s3[a-zA-Z0-9.-]*\\.amazonaws\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://s3-[a-zA-Z0-9-]+\\.amazonaws\\.com/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.s3-website-[a-zA-Z0-9-]+\\.amazonaws\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.blob\\.core\\.windows\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.file\\.core\\.windows\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.queue\\.core\\.windows\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.table\\.core\\.windows\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://storage\\.googleapis\\.com/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.storage\\.googleapis\\.com/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://firebasestorage\\.googleapis\\.com/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.execute-api\\.[a-zA-Z0-9.-]+\\.amazonaws\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.lambda-url\\.[a-zA-Z0-9.-]+\\.on\\.aws[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.cloudfront\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.azurewebsites\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.appspot\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.cloudfunctions\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.run\\.app[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*:[^\\s\"\\'<>]*@[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(postgres(?:ql)?://[^\\s\"\\'<>]*:[^\\s\"\\'<>]*@[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(mysql://[^\\s\"\\'<>]*:[^\\s\"\\'<>]*@[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(mongodb(?:\\+srv)?://[^\\s\"\\'<>]*:[^\\s\"\\'<>]*@[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(redis://:[^\\s\"\\'<>]*@[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://(?:10\\.|172\\.(?:1[6-9]|2[0-9]|3[0-1])\\.|192\\.168\\.)[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://localhost[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://127\\.0\\.0\\.1[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://\\[::1\\][^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://(?:local|dev|test|staging|uat)\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/v[0-9]+/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/api/v[0-9]+/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://graphql\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://rest\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/oauth/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/auth/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/login[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/\\.well-known/[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://accounts\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://auth\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://sso\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://identity\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/metrics[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/health[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/status[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/debug[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://grafana\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://prometheus\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://kibana\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://elk\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/admin[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/dashboard[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/console[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/phpmyadmin[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/pgadmin[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://admin\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://dashboard\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://manager\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://jenkins\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://gitlab\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://github\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://bitbucket\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://circleci\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://travis-ci\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://drone\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://argo\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/docs[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/swagger[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/openapi[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/redoc[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://docs\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api-docs\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/webhook[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/hook[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/callback[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/notify[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://webhook\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\.(?:git|svn|hg)[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\.(?:bak|old|backup|swp)[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\.(?:sql|dump)[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\.(?:tar|gz|zip|7z|rar)[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\.(?:env|config|conf|ini)[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\.(?:pem|key|cer|crt|pfx)[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/mail[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/email[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://mail\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://smtp\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://imap\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://pop\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/rabbitmq[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/kafka[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://rabbitmq\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://kafka\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://mq\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/redis[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/memcached[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://redis\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://memcached\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://cache\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://(?:test|staging|uat|qa|dev|preprod)\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.test[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.staging[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+-test[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+-staging[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.cloudfront\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.akamaihd\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.fastly\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+\\.cdn\\.cloudflare\\.net[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://analytics\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://stats\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://metrics\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://tracking\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/checkout[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9.-]+/payment[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://checkout\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://payment\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://pay\\.[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://hooks\\.slack\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://discord\\.com/api/webhooks[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.telegram\\.org[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.whatsapp\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.stripe\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.paypal\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.twilio\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://api\\.sendgrid\\.com[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*[=&?](?:password|token|key|secret|auth)=[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*\\?(?:[^&\\s]*&){3,}[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[^\\s\"\\'<>]*@[^\\s\"\\'<>]+)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-zA-Z0-9]{6,12}\\.[a-zA-Z]{2,6}[^\\s\"\\'<>]*)",
+      "flags": ""
+    },
+    {
+      "pattern": "(https?://[a-f0-9]{8,}\\.[a-zA-Z]{2,6}[^\\s\"\\'<>]*)",
+      "flags": ""
+    }
+  ],
+  "secret_patterns": [
+    {
+      "pattern": "(AKIA[0-9A-Z]{16,20})",
+      "flags": "",
+      "label": "AWS Access Key"
+    },
+    {
+      "pattern": "(ASIA[0-9A-Z]{16,20})",
+      "flags": "",
+      "label": "AWS Temporary Access Key"
+    },
+    {
+      "pattern": "(AIza[0-9A-Za-z\\-_]{35,45})",
+      "flags": "",
+      "label": "Google API Key"
+    },
+    {
+      "pattern": "(sk_live_[0-9a-zA-Z]{24,})",
+      "flags": "",
+      "label": "Stripe Live Secret Key"
+    },
+    {
+      "pattern": "(gh[pousr]_[0-9a-zA-Z]{36,})",
+      "flags": "",
+      "label": "GitHub Token"
+    },
+    {
+      "pattern": "(xox[baprs]-[0-9a-zA-Z\\-]{10,48})",
+      "flags": "",
+      "label": "Slack Token"
+    },
+    {
+      "pattern": "(eyJ[A-Za-z0-9_-]{10,}\\.eyJ[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9_-]{10,})",
+      "flags": "",
+      "label": "JWT"
+    },
+    {
+      "pattern": "(-----BEGIN (?:RSA|EC|DSA|OPENSSH|PGP) PRIVATE KEY-----)",
+      "flags": "",
+      "label": "Private Key"
+    },
+    {
+      "pattern": "(mongodb(?:\\+srv)?://[^\\s\"\\'\\<>{}\\[\\]]+)",
+      "flags": "",
+      "label": "MongoDB URI"
+    },
+    {
+      "pattern": "(postgres(?:ql)?://[^\\s\"\\'\\<>{}\\[\\]]+)",
+      "flags": "",
+      "label": "PostgreSQL URI"
+    },
+    {
+      "pattern": "(AZURE_CLIENT_SECRET[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{40,}[\"\\']?)",
+      "flags": "",
+      "label": "Azure Client Secret"
+    },
+    {
+      "pattern": "(DefaultAzureCredential[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{40,}[\"\\']?)",
+      "flags": "",
+      "label": "Azure Default Credential"
+    },
+    {
+      "pattern": "(heroku_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})",
+      "flags": "",
+      "label": "Heroku API Key"
+    },
+    {
+      "pattern": "(digitalocean_[0-9a-f]{64})",
+      "flags": "",
+      "label": "DigitalOcean Token"
+    },
+    {
+      "pattern": "(vultr_api_key[=\\s:]+[\"\\']?[0-9a-f]{64}[\"\\']?)",
+      "flags": "",
+      "label": "Vultr API Key"
+    },
+    {
+      "pattern": "(gcp_service_account[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{24,}[\"\\']?)",
+      "flags": "",
+      "label": "GCP Service Account"
+    },
+    {
+      "pattern": "(sk_test_[0-9a-zA-Z]{24,})",
+      "flags": "",
+      "label": "Stripe Test Secret Key"
+    },
+    {
+      "pattern": "(pk_live_[0-9a-zA-Z]{24,})",
+      "flags": "",
+      "label": "Stripe Live Publishable Key"
+    },
+    {
+      "pattern": "(rk_live_[0-9a-zA-Z]{24,})",
+      "flags": "",
+      "label": "Razorpay Live Key"
+    },
+    {
+      "pattern": "(rk_test_[0-9a-zA-Z]{24,})",
+      "flags": "",
+      "label": "Razorpay Test Key"
+    },
+    {
+      "pattern": "(paypal_client_id[=\\s:]+[\"\\']?[A-Za-z0-9_]{80,}[\"\\']?)",
+      "flags": "",
+      "label": "PayPal Client ID"
+    },
+    {
+      "pattern": "(paypal_client_secret[=\\s:]+[\"\\']?[A-Za-z0-9_]{80,}[\"\\']?)",
+      "flags": "",
+      "label": "PayPal Client Secret"
+    },
+    {
+      "pattern": "(braintree_private_key[=\\s:]+[\"\\']?[0-9a-zA-Z]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Braintree Private Key"
+    },
+    {
+      "pattern": "(twitter[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-zA-Z]{25,}[\"\\']?)",
+      "flags": "",
+      "label": "Twitter API Key"
+    },
+    {
+      "pattern": "(twitter[-\\s]?api[-\\s]?secret[=\\s:]+[\"\\']?[0-9a-zA-Z]{50,}[\"\\']?)",
+      "flags": "",
+      "label": "Twitter API Secret"
+    },
+    {
+      "pattern": "(facebook[-\\s]?app[-\\s]?secret[=\\s:]+[\"\\']?[0-9a-f]{32,}[\"\\']?)",
+      "flags": "",
+      "label": "Facebook App Secret"
+    },
+    {
+      "pattern": "(discord[-\\s]?client[-\\s]?secret[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Discord Client Secret"
+    },
+    {
+      "pattern": "(linkedin[-\\s]?client[-\\s]?secret[=\\s:]+[\"\\']?[0-9a-zA-Z]{16}[\"\\']?)",
+      "flags": "",
+      "label": "LinkedIn Client Secret"
+    },
+    {
+      "pattern": "(reddit[-\\s]?secret[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{30,}[\"\\']?)",
+      "flags": "",
+      "label": "Reddit Secret"
+    },
+    {
+      "pattern": "(twilio[-\\s]?account[-\\s]?sid[=\\s:]+[\"\\']?AC[0-9a-f]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Twilio Account SID"
+    },
+    {
+      "pattern": "(sendgrid[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?SG\\.[0-9a-zA-Z\\-_]{66,}[\"\\']?)",
+      "flags": "",
+      "label": "SendGrid API Key"
+    },
+    {
+      "pattern": "(nexmo[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{8}[\"\\']?)",
+      "flags": "",
+      "label": "Nexmo/Vonage API Key"
+    },
+    {
+      "pattern": "(nexmo[-\\s]?api[-\\s]?secret[=\\s:]+[\"\\']?[0-9a-f]{16}[\"\\']?)",
+      "flags": "",
+      "label": "Nexmo/Vonage API Secret"
+    },
+    {
+      "pattern": "(messagebird[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-zA-Z]{25}[\"\\']?)",
+      "flags": "",
+      "label": "MessageBird API Key"
+    },
+    {
+      "pattern": "(gitlab[-\\s]?token[=\\s:]+[\"\\']?glpat-[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "GitLab Personal Access Token"
+    },
+    {
+      "pattern": "(npm[-\\s]?token[=\\s:]+[\"\\']?npm_[0-9a-zA-Z\\-_]{36}[\"\\']?)",
+      "flags": "",
+      "label": "NPM Token"
+    },
+    {
+      "pattern": "(redis://:[^\\s@]+@[^\\s\"\\']+)",
+      "flags": "",
+      "label": "Redis URI with Password"
+    },
+    {
+      "pattern": "(mysql://[^\\s\"\\']+:[^\\s\"\\']+@[^\\s\"\\']+)",
+      "flags": "",
+      "label": "MySQL URI with Credentials"
+    },
+    {
+      "pattern": "(amazonaws\\.com/[^\\s\"\\']*[=\\s:]+[\"\\']?[0-9a-zA-Z/+]{40,}[\"\\']?)",
+      "flags": "",
+      "label": "AWS S3/CloudFront"
+    },
+    {
+      "pattern": "(firebase[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?AIza[0-9A-Za-z\\-_]{35}[\"\\']?)",
+      "flags": "",
+      "label": "Firebase API Key"
+    },
+    {
+      "pattern": "(firebase[-\\s]?database[-\\s]?url[=\\s:]+[\"\\']?https://[^\\s\"\\']+firebaseio\\.com[\"\\']?)",
+      "flags": "",
+      "label": "Firebase Database URL"
+    },
+    {
+      "pattern": "(newrelic[-\\s]?license[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{40}[\"\\']?)",
+      "flags": "",
+      "label": "New Relic License Key"
+    },
+    {
+      "pattern": "(sentry[-\\s]?dsn[=\\s:]+[\"\\']?https://[0-9a-f]{32}@[^\\s\"\\']+[\"\\']?)",
+      "flags": "",
+      "label": "Sentry DSN"
+    },
+    {
+      "pattern": "(datadog[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Datadog API Key"
+    },
+    {
+      "pattern": "(logdna[-\\s]?ingestion[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{32}[\"\\']?)",
+      "flags": "",
+      "label": "LogDNA Ingestion Key"
+    },
+    {
+      "pattern": "(mailgun[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?key-[0-9a-f]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Mailgun API Key"
+    },
+    {
+      "pattern": "(sparkpost[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{40}[\"\\']?)",
+      "flags": "",
+      "label": "SparkPost API Key"
+    },
+    {
+      "pattern": "(mailchimp[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{32}-us[0-9]{1,2}[\"\\']?)",
+      "flags": "",
+      "label": "Mailchimp API Key"
+    },
+    {
+      "pattern": "(cloudflare[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{37}[\"\\']?)",
+      "flags": "",
+      "label": "Cloudflare API Key"
+    },
+    {
+      "pattern": "(cloudflare[-\\s]?auth[-\\s]?key[=\\s:]+[\"\\']?[0-9a-f]{37}[\"\\']?)",
+      "flags": "",
+      "label": "Cloudflare Auth Key"
+    },
+    {
+      "pattern": "(fastly[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-zA-Z]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Fastly API Key"
+    },
+    {
+      "pattern": "(google[-\\s]?maps[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?AIza[0-9A-Za-z\\-_]{35}[\"\\']?)",
+      "flags": "",
+      "label": "Google Maps API Key"
+    },
+    {
+      "pattern": "(here[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{43}[\"\\']?)",
+      "flags": "",
+      "label": "HERE API Key"
+    },
+    {
+      "pattern": "(openai[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?sk-[0-9a-zA-Z]{48}[\"\\']?)",
+      "flags": "",
+      "label": "OpenAI API Key"
+    },
+    {
+      "pattern": "(anthropic[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?sk-ant-[0-9a-zA-Z\\-_]{95}[\"\\']?)",
+      "flags": "",
+      "label": "Anthropic API Key"
+    },
+    {
+      "pattern": "(cohere[-\\s]?api[-\\s]?key[=\\s:]+[\"\\']?[0-9a-zA-Z]{40}[\"\\']?)",
+      "flags": "",
+      "label": "Cohere API Key"
+    },
+    {
+      "pattern": "(\\.pem$|\\.key$|\\.priv$|\\.cert$|\\.crt$)",
+      "flags": "i",
+      "label": "Certificate/Key File"
+    },
+    {
+      "pattern": "(\\.env$|\\.env\\.\\w+$)",
+      "flags": "i",
+      "label": "Environment File"
+    },
+    {
+      "pattern": "(?i)algolia.{0,32}([a-z0-9]{32})\\b",
+      "flags": "i",
+      "label": "Algolia Admin API Key"
+    },
+    {
+      "pattern": "(?i)algolia.{0,16}([A-Z0-9]{10})\\b",
+      "flags": "i",
+      "label": "Algolia Application ID"
+    },
+    {
+      "pattern": "(?i)cloudflare.{0,32}(?:secret|private|access|key|token).{0,32}([a-z0-9_-]{38,42})\\b",
+      "flags": "i",
+      "label": "Cloudflare API Token"
+    },
+    {
+      "pattern": "(?i)(?:cloudflare|x-auth-user-service-key).{0,64}(v1\\.0-[a-z0-9._-]{160,})\\b",
+      "flags": "i",
+      "label": "Cloudflare Service Key"
+    },
+    {
+      "pattern": "(mysql:\\/\\/[a-z0-9._%+\\-]+:[^\\s:@]+@(?:\\[[0-9a-f:.]+\\]|[a-z0-9.-]+)(?::\\d{2,5})?(?:\\/[^\\s\"\\'?:]+)?(?:\\?[^\\s\"\\']*)?)",
+      "flags": "",
+      "label": "MySQL URI with Credentials"
+    },
+    {
+      "pattern": "\\b(sgp_[A-Z0-9_-]{60,70})\\b",
+      "flags": "",
+      "label": "Segment Public API Token"
+    },
+    {
+      "pattern": "(?i)(?:segment|sgmt).{0,16}(?:secret|private|access|key|token).{0,16}([A-Z0-9_-]{40,50}\\.[A-Z0-9_-]{40,50})",
+      "flags": "i",
+      "label": "Segment API Key"
+    },
+    {
+      "pattern": "(?i)(?:facebook|fb).{0,8}(?:app|application).{0,16}(\\d{15})\\b",
+      "flags": "i",
+      "label": "Facebook App ID"
+    },
+    {
+      "pattern": "(EAACEdEose0cBA[A-Z0-9]{20,})\\b",
+      "flags": "",
+      "label": "Facebook Access Token"
+    },
+    {
+      "pattern": "\\b(ya29\\.[a-z0-9_-]{30,})\\b",
+      "flags": "",
+      "label": "Google OAuth2 Access Token"
+    },
+    {
+      "pattern": "\\d{9}:[a-zA-Z0-9_-]{35}",
+      "flags": "",
+      "label": "Telegram Bot Token"
+    },
+    {
+      "pattern": "lin_api_[a-zA-Z0-9]{40}",
+      "flags": "",
+      "label": "Linear API Key"
+    },
+    {
+      "pattern": "[hH]eroku['\\\"][0-9a-f]{32}['\\\"]",
+      "flags": "",
+      "label": "Heroku API Key"
+    },
+    {
+      "pattern": "dop_v1_[a-z0-9]{64}",
+      "flags": "",
+      "label": "DigitalOcean Token"
+    },
+    {
+      "pattern": "SK[0-9a-fA-F]{32}",
+      "flags": "",
+      "label": "Twilio API Key"
+    },
+    {
+      "pattern": "SG\\.[\\w\\d\\-_]{22}\\.[\\w\\d\\-_]{43}",
+      "flags": "",
+      "label": "SendGrid API Key"
+    },
+    {
+      "pattern": "glpat-[0-9a-zA-Z-_]{20}",
+      "flags": "",
+      "label": "GitLab Token"
+    },
+    {
+      "pattern": "shpat_[0-9a-fA-F]{32}",
+      "flags": "",
+      "label": "Shopify Access Token"
+    },
+    {
+      "pattern": "[a-z0-9]{32}",
+      "flags": "",
+      "label": "Datadog API Key"
+    },
+    {
+      "pattern": "NRII-[a-zA-Z0-9]{20,}",
+      "flags": "",
+      "label": "New Relic Key"
+    }
+  ],
+  "email_pattern": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6})",
+  "file_patterns": [
+    {
+      "pattern": "[\"\\']([a-zA-Z0-9_/.-]+\\.(?:sql|db|sqlite|sqlite3|mdb|accdb|dbf|mdf|csv|tsv|tab|dat|data|xlsx|xls|xlsm|xlsb|ods|json|jsonl|ndjson|xml|xhtml|xsd|xslt|rss|atom|yaml|yml|toml|properties|avro|parquet|orc|feather|h5|hdf5|hdf|mat|pkl|pickle|joblib|tfrecord|recordio|arrow|conf|config|cfg|ini|inf|reg|env|properties|settings|prefs|log|logs|txt|text|md|markdown|rst|xml|json|yaml|yml|htaccess|htpasswd|gitignore|gitattributes|gitmodules|dockerignore|dockerfile|editorconfig|bak|backup|old|orig|copy|temp|tmp|swp|swo|swn|~|\\$|key|pem|crt|cer|csr|der|p12|pfx|p7b|p7c|spc|jks|keystore|truststore|gpg|pgp|asc|pub|priv|doc|docx|docm|odt|rtf|pdf|ppt|pptx|pptm|odp|pages|numbers|key|epub|mobi|azw|html|htm|zip|tar|gz|tgz|bz2|tbz2|xz|txz|rar|7z|z|Z|lz|lzma|lzo|iso|img|dmg|vhd|vdi|vmdk|war|jar|ear|aar|sh|bash|zsh|fish|csh|tcsh|ksh|bat|cmd|ps1|psm1|psd1|vbs|wsf|py|pyc|pyo|pyd|pyw|pyx|rb|erb|rake|gemspec|pl|pm|t|js|jsx|mjs|cjs|ts|tsx|php|phtml|php3|php4|php5|php7|phps|java|class|jar|go|rs|cpp|c|cc|cxx|h|hpp|hh|hxx|cs|vb|fs|swift|m|mm|kt|kts|scala|lua|erl|hrl|ex|exs|clj|cljs|cljc|edn|hs|lhs|jpg|jpeg|png|gif|bmp|tiff|tif|webp|mp3|wav|flac|aac|ogg|m4a|mp4|avi|mov|wmv|flv|mkv|webm|svg|ico|icns|dump|export|backup|restore|venv|virtualenv|env|lock|pid|exe|dll|so|dylib|a|lib|o|obj|bin|elf|pcap|cap|pem|der|tf|tfstate|tfvars|yml|yaml|json|hcl|secret|private|hidden|password|credential|token|license|licence|history|bash_history|known_hosts|authorized_keys|id_rsa|id_dsa|id_ecdsa|id_ed25519|ssh|vault|kubeconfig|terraform|dockerconfig|aws|azure|gcp|secret|key|token))[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\']((?:\\.env(?:\\.\\w+)?|\\.dockerignore|\\.gitignore|\\.npmignore|\\.htaccess|\\.htpasswd|\\.bashrc|\\.bash_profile|\\.profile|\\.zshrc|\\.ssh/config|\\.ssh/authorized_keys|\\.ssh/known_hosts|\\.aws/config|\\.aws/credentials|\\.kube/config|\\.docker/config\\.json|\\.npmrc|\\.yarnrc|\\.pypirc|\\.gitconfig|\\.git-credentials|\\.netrc|\\.pgpass|\\.my\\.cnf|\\.plan|\\.project|\\.travis\\.yml|\\.circleci/config\\.yml|\\.github/workflows/.*\\.yml|\\.vscode/settings\\.json|\\.idea/.*|\\.DS_Store|\\.Trash|\\.Trashes|\\.Spotlight-V100|\\.fseventsd|\\.metadata|\\.svn/.*|\\.git/.*|\\.hg/.*|\\.cache/.*|\\.config/.*|\\.local/.*|\\.m2/settings\\.xml|\\.gradle/gradle\\.properties|\\.composer/auth\\.json|\\.npm/_auth|\\.pip/pip\\.conf|\\.condarc|\\.bowerrc|\\.jfrog|\\.snyk|\\.sops\\.yaml|\\.pre-commit-config\\.yaml|\\.renovaterc|\\.babelrc|\\.eslintrc|\\.eslintrc\\.json|\\.eslintrc\\.js|\\.prettierrc|\\.prettierrc\\.json|\\.prettierrc\\.js|\\.stylelintrc|\\.commitlintrc|\\.lintstagedrc|\\.huskyrc|\\.npmignore|\\.yarnrc\\.yml|\\.yarn-integrity|\\.pnp\\.js|\\.yarn/.*|\\.node_repl_history|\\.wget-hsts|\\.lesshst|\\.mysql_history|\\.psql_history|\\.sqlite_history|\\.rediscli_history|\\.dbshell|\\.mongorc\\.js|\\.mongoshrc\\.js|\\.irb_history|\\.python_history|\\.jupyter/.*|\\.ipython/.*|\\.Rhistory|\\.bash_history|\\.zsh_history|\\.fish_history|\\.inputrc|\\.tmux\\.conf|\\.screenrc|\\.viminfo|\\.vimrc|\\.gvimrc|\\.emacs|\\.emacs\\.d/.*|\\.gnupg/.*|\\.password-store/.*|\\.keepass|\\.kdbx|\\.1password|\\.lastpass|\\.bitwarden|\\.vault-token|\\.terraformrc|\\.terraform\\.d/.*|\\.packer\\.d/.*|\\.vagrant\\.d/.*|\\.ansible/.*|\\.chef/.*|\\.puppet/.*|\\.salt/.*|\\.mina/.*|\\.capistrano/.*|\\.mina/.*|\\.mina_deploy/.*|\\.mina\\.rb|\\.deploy/.*|\\.pm2/.*|\\.forever/.*|\\.pm2/.*|\\.systemd/.*|\\.init\\.d/.*|\\.cron\\.d/.*|\\.logrotate\\.d/.*|\\.rsyslog\\.d/.*|\\.nginx/.*|\\.apache2/.*|\\.httpd/.*|\\.tomcat/.*|\\.jetty/.*|\\.wildfly/.*|\\.jboss/.*|\\.weblogic/.*|\\.websphere/.*|\\.iis/.*|\\.phusion/.*|\\.passenger/.*|\\.unicorn/.*|\\.puma/.*|\\.thin/.*|\\.god/.*|\\.bluepill/.*|\\.eye/.*|\\.supervisor/.*|\\.monit/.*|\\.runit/.*|\\.s6/.*|\\.daemontools/.*|\\.launchd/.*|\\.upstart/.*|\\.systemd/.*|\\.init/.*|\\.rc\\.d/.*|\\.profile\\.d/.*|\\.bashrc\\.d/.*|\\.zshrc\\.d/.*|\\.config/.*|\\.local/.*|\\.cache/.*|\\.tmp/.*|\\.temp/.*|\\.trash/.*|\\.Trash/.*|\\.recycle/.*|\\.Recycle\\.Bin/.*|\\.\\$RECYCLE\\.BIN/.*|\\.found\\.\\d+/.*|\\.lost\\+found/.*|\\.fseventsd/.*|\\.Spotlight-V100/.*|\\.TemporaryItems/.*|\\.Trashes/.*|\\.VolumeIcon\\.icns|\\.DS_Store|\\.AppleDouble|\\.LSOverride|\\.AppleDB|\\.AppleDesktop|\\.AppleProfile|\\.ParentalControls|\\.DocumentRevisions-V100|\\.MobileBackups|\\.PKInstallSandboxManager|\\.file|\\.metadata|\\.idea|\\.vscode|\\.atom|\\.sublime-project|\\.sublime-workspace|\\.vs/.*|\\.project|\\.classpath|\\.settings/.*|\\.buildpath|\\.factorypath|\\.springBeans|\\.externalToolBuilders/.*|\\.recommenders/.*|\\.eclipse/.*|\\.metadata/.*|\\.mvn/.*|\\.gradle/.*|\\.sbt/.*|\\.bloop/.*|\\.mill/.*|\\.coursier/.*|\\.ivy2/.*|\\.sbt\\.boot/.*|\\.activator/.*|\\.play/.*|\\.npm/.*|\\.node-gyp/.*|\\.node_repl_history|\\.yarn/.*|\\.bower/.*|\\.jspm/.*|\\.typings/.*|\\.tsd/.*|\\.dart/.*|\\.pub-cache/.*|\\.flutter/.*|\\.cargo/.*|\\.rustup/.*|\\.go/.*|\\.gopath/.*|\\.glide/.*|\\.dep/.*|\\.vendor/.*|\\.vendor-cache/.*|\\.bundle/.*|\\.rvm/.*|\\.rbenv/.*|\\.gem/.*|\\.gems/.*|\\.bundler/.*|\\.rake/.*|\\.rails/.*|\\.migrations/.*|\\.seeds\\.rb|\\.schema\\.rb|\\.fixtures\\.yml|\\.factories\\.rb|\\.spec_helper\\.rb|\\.rails_helper\\.rb|\\.rspec|\\.guard\\.rb|\\.simplecov|\\.coverage/.*|\\.yardoc/.*|\\.ri/.*|\\.rdoc/.*|\\.pryrc|\\.irbrc|\\.ruby-version|\\.ruby-gemset|\\.python-version|\\.requirements\\.txt|\\.pip-tools/.*|\\.pipenv/.*|\\.poetry/.*|\\.venv/.*|\\.virtualenv/.*|\\.conda/.*|\\.anaconda/.*|\\.jupyter/.*|\\.ipython/.*|\\.python_history|\\.node_version|\\.nvmrc|\\.npmrc|\\.yarnrc|\\.bowerrc|\\.composer/.*|\\.phar|\\.pearrc|\\.php-version|\\.phpenv/.*|\\.hhvm/.*|\\.wp-cli/.*|\\.drush/.*|\\.drupal/.*|\\.wordpress/.*|\\.joomla/.*|\\.magento/.*|\\.prestashop/.*|\\.opencart/.*|\\.woocommerce/.*|\\.shopify/.*|\\.bigcommerce/.*|\\.squarespace/.*|\\.wix/.*|\\.weebly/.*|\\.webflow/.*|\\.ghost/.*|\\.jekyll/.*|\\.hugo/.*|\\.gatsby/.*|\\.next/.*|\\.nuxt/.*|\\.vue/.*|\\.react/.*|\\.angular/.*|\\.ember/.*|\\.backbone/.*|\\.meteor/.*|\\.sails/.*|\\.loopback/.*|\\.nestjs/.*|\\.adonis/.*|\\.laravel/.*|\\.symfony/.*|\\.zend/.*|\\.cakephp/.*|\\.codeigniter/.*|\\.yii/.*|\\.phalcon/.*|\\.slim/.*|\\.lumen/.*|\\.fuelphp/.*|\\.kohana/.*|\\.aura/.*|\\.bearframework/.*|\\.bolt/.*|\\.cms/.*|\\.concrete5/.*|\\.contao/.*|\\.craftcms/.*|\\.dokuwiki/.*|\\.drupal/.*|\\.expressionengine/.*|\\.grav/.*|\\.joomla/.*|\\.kirby/.*|\\.magento/.*|\\.mediawiki/.*|\\.modx/.*|\\.octobercms/.*|\\.opencart/.*|\\.pagekit/.*|\\.phpbb/.*|\\.pimcore/.*|\\.prestashop/.*|\\.processwire/.*|\\.pyrocms/.*|\\.redaxo/.*|\\.silverstripe/.*|\\.spip/.*|\\.squiz/.*|\\.statamic/.*|\\.subrion/.*|\\.textpattern/.*|\\.typo3/.*|\\.umbraco/.*|\\.vbulletin/.*|\\.wolfcms/.*|\\.wordpress/.*|\\.xenforo/.*|\\.zikula/.*|secret|private|confidential|passwords|credentials|tokens|keys|\\.swp|\\.swo|\\.swn|\\.DS_Store|Thumbs\\.db|desktop\\.ini|\\$\\$.*\\$\\$))[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\']([a-zA-Z0-9_/.-]*(?:password|credential|secret|token|key|private|confidential|hidden|internal|backup|dump|archive|snapshot|config|setting|profile|preference|log|debug|trace|audit|database|db|data|admin|root|superuser|license|licence|\\.old|\\.new|\\.orig|\\.copy|\\.tmp|\\.temp|\\.bak)[a-zA-Z0-9_/.-]*\\.[a-zA-Z0-9]+)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](?:\\.(?:git|svn|hg)/.*|\\.?config/.*|\\.?secrets/.*|\\.?private/.*|\\.?secure/.*|\\.?backup/.*|\\.?archive/.*|\\.?log/.*|\\.?tmp/.*|\\.?temp/.*|\\.?cache/.*|\\.?trash/.*|\\.?recycle/.*|\\.?dump/.*|\\.?snapshot/.*)[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\']([A-Za-z]:\\\\[^\\s\"\\']+\\.(?:exe|dll|sys|bat|cmd|ps1|vbs|reg|pif|scr|msi|msp))[\"\\']",
+      "flags": "i"
+    },
+    {
+      "pattern": "[\"\\'](/etc/[^\\s\"\\']+|/var/log/[^\\s\"\\']+|/tmp/[^\\s\"\\']+|/root/[^\\s\"\\']+|/home/[^/]+/[^\\s\"\\']+)[\"\\']",
+      "flags": ""
+    },
+    {
+      "pattern": "[\"\\']([a-zA-Z0-9_/.-]+\\.(?:v\\d+|version\\d+|_\\d{8}|_\\d{6}|-\\d{8}|-\\d{6}|\\d{14}|\\d{8}))[\"\\']",
+      "flags": "i"
+    }
+  ],
+  "secret_patterns_low_confidence": [
+    {
+      "pattern": "(linode_token[=\\s:]+[\"\\']?[0-9a-f]{64}[\"\\']?)",
+      "flags": "",
+      "label": "Linode Token"
+    },
+    {
+      "pattern": "(square_access_token[=\\s:]+[\"\\']?EAAA[0-9a-zA-Z\\-_]{80,}[\"\\']?)",
+      "flags": "",
+      "label": "Square Access Token"
+    },
+    {
+      "pattern": "(facebook[-\\s]?access[-\\s]?token[=\\s:]+[\"\\']?[0-9a-zA-Z]{200,}[\"\\']?)",
+      "flags": "",
+      "label": "Facebook Access Token"
+    },
+    {
+      "pattern": "(discord[-\\s]?bot[-\\s]?token[=\\s:]+[\"\\']?[A-Za-z0-9\\.\\-_]{59,}[\"\\']?)",
+      "flags": "",
+      "label": "Discord Bot Token"
+    },
+    {
+      "pattern": "(instagram[-\\s]?access[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{200,}[\"\\']?)",
+      "flags": "",
+      "label": "Instagram Access Token"
+    },
+    {
+      "pattern": "(twilio[-\\s]?auth[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Twilio Auth Token"
+    },
+    {
+      "pattern": "(plivo[-\\s]?auth[-\\s]?token[=\\s:]+[\"\\']?[0-9a-zA-Z]{40}[\"\\']?)",
+      "flags": "",
+      "label": "Plivo Auth Token"
+    },
+    {
+      "pattern": "(dockerhub[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{12}-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\"\\']?)",
+      "flags": "",
+      "label": "DockerHub Token"
+    },
+    {
+      "pattern": "(circleci[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{40}[\"\\']?)",
+      "flags": "",
+      "label": "CircleCI Token"
+    },
+    {
+      "pattern": "(travisci[-\\s]?token[=\\s:]+[\"\\']?[0-9a-zA-Z]{22,}[\"\\']?)",
+      "flags": "",
+      "label": "Travis CI Token"
+    },
+    {
+      "pattern": "(jenkins[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{32}[\"\\']?)",
+      "flags": "",
+      "label": "Jenkins Token"
+    },
+    {
+      "pattern": "(bitbucket[-\\s]?token[=\\s:]+[\"\\']?[0-9a-zA-Z]{64}[\"\\']?)",
+      "flags": "",
+      "label": "Bitbucket Token"
+    },
+    {
+      "pattern": "(pypi[-\\s]?token[=\\s:]+[\"\\']?pypi-[0-9a-zA-Z\\-_]{40,}[\"\\']?)",
+      "flags": "",
+      "label": "PyPI Token"
+    },
+    {
+      "pattern": "(redis[-\\s]?password[=\\s:]+[\"\\']?[^\\s\"\\']{6,}[\"\\']?)",
+      "flags": "",
+      "label": "Redis Password"
+    },
+    {
+      "pattern": "(mysql[-\\s]?password[=\\s:]+[\"\\']?[^\\s\"\\']{6,}[\"\\']?)",
+      "flags": "",
+      "label": "MySQL Password"
+    },
+    {
+      "pattern": "(cassandra[-\\s]?password[=\\s:]+[\"\\']?[^\\s\"\\']{6,}[\"\\']?)",
+      "flags": "",
+      "label": "Cassandra Password"
+    },
+    {
+      "pattern": "(splunk[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\"\\']?)",
+      "flags": "",
+      "label": "Splunk Token"
+    },
+    {
+      "pattern": "(ses[-\\s]?smtp[-\\s]?password[=\\s:]+[\"\\']?[0-9a-zA-Z/+]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "AWS SES SMTP Password"
+    },
+    {
+      "pattern": "(postmark[-\\s]?server[-\\s]?token[=\\s:]+[\"\\']?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\"\\']?)",
+      "flags": "",
+      "label": "Postmark Server Token"
+    },
+    {
+      "pattern": "(mapbox[-\\s]?access[-\\s]?token[=\\s:]+[\"\\']?pk\\.[0-9a-zA-Z\\-_]{100,}[\"\\']?)",
+      "flags": "",
+      "label": "Mapbox Access Token"
+    },
+    {
+      "pattern": "(huggingface[-\\s]?token[=\\s:]+[\"\\']?hf_[0-9a-zA-Z]{34}[\"\\']?)",
+      "flags": "",
+      "label": "Hugging Face Token"
+    },
+    {
+      "pattern": "(replicate[-\\s]?api[-\\s]?token[=\\s:]+[\"\\']?r8_[0-9a-zA-Z]{37}[\"\\']?)",
+      "flags": "",
+      "label": "Replicate API Token"
+    },
+    {
+      "pattern": "([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})",
+      "flags": "",
+      "label": "UUID"
+    },
+    {
+      "pattern": "([0-9a-zA-Z]{32,})",
+      "flags": "",
+      "label": "Generic Long Token"
+    },
+    {
+      "pattern": "(api[-\\s_]?key[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Generic API Key"
+    },
+    {
+      "pattern": "(secret[-\\s_]?key[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Generic Secret Key"
+    },
+    {
+      "pattern": "(password[=\\s:]+[\"\\']?[^\\s\"\\']{6,}[\"\\']?)",
+      "flags": "",
+      "label": "Password Field"
+    },
+    {
+      "pattern": "(token[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Generic Token"
+    },
+    {
+      "pattern": "(access[-\\s_]?token[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Access Token"
+    },
+    {
+      "pattern": "(refresh[-\\s_]?token[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Refresh Token"
+    },
+    {
+      "pattern": "([A-Za-z0-9+/]{64,}[=]{0,2})",
+      "flags": "",
+      "label": "Potential Base64 Secret"
+    },
+    {
+      "pattern": "(\\$[A-Z_]{5,}[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Config Variable with Secret"
+    },
+    {
+      "pattern": "([A-Z_]{5,}_SECRET[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Secret Environment Variable"
+    },
+    {
+      "pattern": "([A-Z_]{5,}_KEY[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Key Environment Variable"
+    },
+    {
+      "pattern": "([A-Z_]{5,}_TOKEN[=\\s:]+[\"\\']?[0-9a-zA-Z\\-_]{20,}[\"\\']?)",
+      "flags": "",
+      "label": "Token Environment Variable"
+    },
+    {
+      "pattern": "(?i)(?:facebook|fb).{0,32}(?:api|app|application|client|consumer|secret|key).{0,32}([a-z0-9]{32})\\b",
+      "flags": "i",
+      "label": "Facebook Secret Key"
+    },
+    {
+      "pattern": "sl.[A-Za-z0-9_-]{20,100}",
+      "flags": "",
+      "label": "Dropbox Access Token"
+    },
+    {
+      "pattern": "[a-f0-9]{32}",
+      "flags": "",
+      "label": "Bugsnag API Key"
+    }
+  ]
+}
